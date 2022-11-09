@@ -4,12 +4,6 @@ import { StyleSheet, Text, View,Button,TextInput,TouchableOpacity,ScrollView } f
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
-
-
-
-
-
-
 export default function LoginScreen({navigation}) {
     const [email, onChangeEmail] = React.useState(null);
     const [password, onChangePassword] = React.useState(null);

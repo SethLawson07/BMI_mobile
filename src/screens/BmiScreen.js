@@ -14,36 +14,28 @@ export default function BmiScreen({navigation,route}) {
     const [height, onChangeHeight] = React.useState(null);
   
 
-    function verification(){
-        if(weight==null || height==null){
-            alert("Incorrect information, please fill in your login information")
-        }
-    }
-   
-    
-
+    const verification = () => (weight==null || height==null) ?   alert("Incorrect information, please fill in your login information") : ''
 
    
     //Generer l'ID
-    function makeid(length) {
+    const makeid = (length) => {
         var result           = '';
         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var charactersLength = characters.length;
         for ( var i = 0; i < length; i++ ) {
-          result += characters.charAt(Math.floor(Math.random() * 
-     charactersLength));
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
        }
        return result;
     }
 
    //Calculer l'IMC
-   function test(){
+   const test = () => {
     const res= weight/(Math.pow(height,2))*10000
     return res
    }
 
    //Interpretation de L'IMC
-   function commentaire(){
+   const commentaire = () => {
       const res=test();
        if(res<18.5) return "Poids insuffisant"
        else if (res>18.5 && res<24.9) return "Poids normal "
@@ -115,14 +107,7 @@ export default function BmiScreen({navigation,route}) {
         style={styles.button}
         onPress={Create} >
         <Text style={{color:"white"}}>Calculate</Text>
-      </TouchableOpacity>
-
-
-        
-
-      
-
-      
+      </TouchableOpacity>   
      
     </View>
 );}

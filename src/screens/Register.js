@@ -10,7 +10,6 @@ export default function RegisterScreen({navigation}) {
    
     const [password, onChangePassword] = React.useState(null);
    
-    
 
     /*useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(user => {
