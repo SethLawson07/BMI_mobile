@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button,TextInput,TouchableOpacity,ScrollView } from 'react-native';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
+import handleLogin from "../function";
 
 export default function LoginScreen({navigation}) {
     const [email, onChangeEmail] = React.useState(null);
@@ -10,30 +10,7 @@ export default function LoginScreen({navigation}) {
 
     
  
-   // Login user
-    const handleLogin = () => {
-     if(email==null && password ==null){
-        alert("Incorrect information, please fill in your login information")
-     }
-     else{
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-          
-            navigation.replace("Calculate",{ id: user.uid})
-         
-            //console.log('Registered with:', user.uid);
-            // ...
-          })
-          .catch((error) => {
-            alert("Incorrect information, please fill in your login information")
-            //const errorCode = error.code;
-            //const errorMessage = error.message;
-          });
-     }
-    }
+  
 
     return (
     <View style={styles.container}>

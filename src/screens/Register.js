@@ -3,69 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button,TextInput ,TouchableOpacity,ScrollView} from 'react-native';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {db} from "../../firebase";
-//import { doc, setDoc } from "firebase/firestore"; 
+import {handleSignUp} from "../function";
 
 export default function RegisterScreen({navigation}) {
+    
     const [email, onChangeEmail] = React.useState(null);
-   
     const [password, onChangePassword] = React.useState(null);
-   
-
-    /*useEffect(() => {
-      const unsubscribe = auth.onAuthStateChanged(user => {
-        if (user) {
-          navigation.replace("LoginScreen")
-        }
-      })
-  
-      return unsubscribe
-    }, [])*/
-
-
-   
-    
-    
-    //Create new user
-    const handleSignUp = () => {
-
-
-       if(email == null && password ==null ){
-        alert("Incorrect information, please fill in your login information")
-       }
-       else{
-
-        const auth=getAuth();
-    createUserWithEmailAndPassword(auth,email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-       // console.log('Registered with:', user.email);
-        alert("Account Created!")
-        //Redirect
-        navigation.replace("Login")
-       
-      
-      })
-      .catch((error) => {
-        alert("Incorrect information, please fill in your login information")
-        //const errorCode = error.code;
-        //const errorMessage = error.message;
-        // ..
-      });
-       }
-      }
-
-
-  
-   /* const handleSignUp = () => {
-      auth
-        .createUserWithEmailAndPassword(email, password)
-        .then(userCredentials => {
-          const user = userCredentials.user;
-          console.log('Registered with:', user.email);
-        })
-        .catch(error => alert(error.message))
-    }*/
   
    
 
