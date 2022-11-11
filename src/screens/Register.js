@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button,TextInput ,TouchableOpacity,ScrollView} from 'react-native';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import {db} from "../../firebase";
+import {db} from "../../config/firebase";
 import {handleSignUp} from "../function";
 
 export default function RegisterScreen({navigation}) {

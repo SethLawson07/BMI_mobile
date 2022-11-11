@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button,TextInput,TouchableOpacity,ScrollView } from 'react-native';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import {db} from "../../firebase";
+import {db} from "../../config/firebase";
 import { doc, setDoc } from "firebase/firestore"; 
 import {verification,makeid,test,commentaire,create} from "../function";
 
