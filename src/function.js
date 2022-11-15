@@ -122,4 +122,4 @@ const Create = async() => {
     }
    }
 
-export  {verification,makeid,test,commentaire,create,handleLogin,handleSignUp};
+export  {verification,makeid,test,commentaire,Create,handleLogin,handleSignUp};

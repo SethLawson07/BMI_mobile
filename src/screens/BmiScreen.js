@@ -45,11 +45,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-   // alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-  //  flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -67,24 +65,24 @@ const styles = StyleSheet.create({
   },
   button : {
     marginTop:50,
-  marginBottom:20,
-  alignItems: "center",
-  backgroundColor: "#FF7F00",
-  borderRadius:10,
-  paddingLeft:45,
-  paddingRight:45,
- paddingTop:10,
- paddingBottom:10
+    marginBottom:20,
+    alignItems: "center",
+    backgroundColor: "#FF7F00",
+    borderRadius:10,
+    paddingLeft:45,
+    paddingRight:45,
+    paddingTop:10,
+    paddingBottom:10
 },
 button2 : {
-  marginBottom:20,
-  alignItems: "center",
-  backgroundColor: "#DDDDDD",
-  borderRadius:10,
-  paddingLeft:45,
-  paddingRight:45,
- paddingTop:10,
- paddingBottom:10
+    marginBottom:20,
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    borderRadius:10,
+    paddingLeft:45,
+    paddingRight:45,
+    paddingTop:10,
+    paddingBottom:10
 },
 });
 

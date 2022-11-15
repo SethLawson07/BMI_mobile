@@ -41,7 +41,7 @@ export default function RegisterScreen({navigation}) {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={handleSignUp} >
+        onPress={handleSignUp()} >
         <Text style={{color:"white"}}>Register</Text>
       </TouchableOpacity>  
       
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 
   },
   button : {
-    marginTop:50,
+    marginTop:10,
   marginBottom:20,
   alignItems: "center",
   backgroundColor: "#FF7F00",
@@ -76,7 +76,9 @@ const styles = StyleSheet.create({
   paddingLeft:45,
   paddingRight:45,
  paddingTop:10,
- paddingBottom:10
+ paddingBottom:10,
+ marginLeft:40,
+ marginRight:40
 },
 });
 

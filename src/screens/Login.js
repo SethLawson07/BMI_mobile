@@ -6,17 +6,12 @@ import handleLogin from "../function";
 
 export default function LoginScreen({navigation}) {
     const [email, onChangeEmail] = React.useState(null);
-    const [password, onChangePassword] = React.useState(null);
-
-    
- 
-  
+    const [password, onChangePassword] = React.useState(null); 
 
     return (
     <View style={styles.container}>
         <StatusBar style="auto" />
-      
-      
+            
       <TextInput
         style={styles.input}
         onChangeText={onChangeEmail}
@@ -34,10 +29,9 @@ export default function LoginScreen({navigation}) {
       />
 
       <TouchableOpacity
-        style={styles.button}
-       /// onPress={verification} >
-     onPress={handleLogin } >
-        <Text style={{color:"white"}}>Se connecter</Text>
+        style={styles.button}      
+        onPress={handleLogin } >
+        <Text style={{color:"white"}}>Login</Text>
       </TouchableOpacity>
 
       
@@ -50,7 +44,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-   // alignItems: 'center',
     justifyContent: 'center',
   },
   input: {
@@ -64,15 +57,17 @@ const styles = StyleSheet.create({
 
   },
   button : {
-    marginTop:50,
+  marginTop:10,
   marginBottom:20,
   alignItems: "center",
   backgroundColor: "#FF7F00",
   borderRadius:10,
   paddingLeft:45,
   paddingRight:45,
- paddingTop:10,
- paddingBottom:10
+  paddingTop:10,
+  paddingBottom:10,
+  marginLeft:40,
+  marginRight:40
 },
 button2 : {
   marginBottom:20,
@@ -81,8 +76,8 @@ button2 : {
   borderRadius:10,
   paddingLeft:45,
   paddingRight:45,
- paddingTop:10,
- paddingBottom:10
+  paddingTop:10,
+  paddingBottom:10
 },
 });
 
